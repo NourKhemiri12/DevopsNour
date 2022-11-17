@@ -68,5 +68,14 @@ stage("Create Docker Image") {
                     sh 'docker login -u nourkhemiri -p 203JFT1459'
                 }
         }
+stage("pushing image to docker hub") { 
+             steps { 
+                 script { 
+       sh 'docker push nourkhemiri/spring:latest'
+                        
+                    
+                 } 
+             } 
+         }
 }
 }
