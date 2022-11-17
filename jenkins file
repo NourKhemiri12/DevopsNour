@@ -54,7 +54,13 @@ pipeline {
 		  }
 	
 	
-
+stage("Create Docker Image") {
+            steps {
+                script {
+                   sh 'docker build -t nourkhemiri/spring:latest .'
+                }
+            }
+        }
 	
                
 }
