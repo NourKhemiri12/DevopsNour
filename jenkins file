@@ -62,6 +62,11 @@ stage("Create Docker Image") {
             }
         }
 	
-               
+               stage("Login to DockerHub") {
+                steps{
+
+                    sh 'docker login -u nourkhemiri -p 203JFT1459'
+                }
+        }
 }
 }
